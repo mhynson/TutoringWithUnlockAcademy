@@ -7,3 +7,4 @@
 - HTML, CSS, and Javascript basics
 - Local development
 - Live building of a simple HTML webpage and adding styles (see kobe-bryant directory)
+- Debugging and troubleshooting issues with your website
