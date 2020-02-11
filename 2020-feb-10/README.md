@@ -1,5 +1,4 @@
-# Unlock Academy Tutoring
-## February 10, 2020
+# Unlock Academy Live Tutoring Session - February 10, 2020
 
 ## What is covered in this session?
 
