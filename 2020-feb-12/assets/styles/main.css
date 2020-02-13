@@ -1,0 +1,155 @@
+body, html {
+  background-color: white;
+  font-family: Arial, Helvetica, sans-serif; 
+  font-size: 16px;
+}
+
+header {
+  height: 4em;
+  padding: 2em 1.5em 1em 1.5em;
+}
+
+main > header {
+  background-color: rgb(164, 171, 160);
+}
+
+section {
+  min-height: 2em;
+}
+
+section header h2 {
+  padding-right: 1em;
+  padding-bottom: 4px;
+  border-bottom: 1px solid #c7c7c7;
+  letter-spacing: -0.5px;
+  text-align: right;
+}
+
+section.welcome-container {
+  background-color: #ffffff;
+  position: relative;
+}
+
+section.welcome-container header {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 1em;
+
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+section.welcome-container img {
+  max-width: 100%;
+}
+
+
+section .content-container {
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  padding: 2em;
+}
+
+section.about-us-container .content-container .image-container{
+  width: 50%;
+}
+
+section.about-us-container .content-container .content{
+  width: 50%;
+  text-align: justify;
+}
+
+section.about-us-container .content-container .image-container img{
+  max-width: 320px;
+}
+
+section.shop-container {
+  height: 800px;
+}
+
+section.about-us-container {
+  height: auto;
+}
+
+section.contact-us-container {
+  height: 800px;
+}
+
+form {
+  width: 100%;
+}
+
+section.contact-us-container .input-container {
+  margin: 2em auto;  
+}
+
+section.contact-us-container label,
+section.contact-us-container input,
+section.contact-us-container button,
+section.contact-us-container textarea {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+}
+
+section.contact-us-container input {
+  width: 40em;
+  height: 2em;
+}
+
+section.contact-us-container textarea {
+  width: 40em;
+  height: 20em;
+}
+
+section.contact-us-container button.submit {
+  width: 240px;
+  height: 64px;
+  background-color: rgb(72, 148, 72);
+  color: white;
+  font-size: 1.5em;
+  border: none;
+  border-radius: 64px;
+}
+
+footer {
+  height: 3em;
+  background-color: orange;
+  padding: 1em;
+}
+
+header nav,
+footer nav {
+  width: 100%;
+  height: 100%;
+  color: white;
+  margin: 0.5em;
+}
+
+header nav ul,
+footer nav ul {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  margin: 0 auto;
+}
+
+header nav ul li,
+footer nav ul li {
+  width: 25%;
+  list-style: none;
+}
+
+header nav ul li a,
+footer nav ul li a {
+  font-size: 1em;
+  font-weight: bold;
+  color: white;
+  border: 1px solid white;
+  border-left: none;
+  border-right: none;
+  text-decoration: none;
+  padding: 0.5em; 
+}
