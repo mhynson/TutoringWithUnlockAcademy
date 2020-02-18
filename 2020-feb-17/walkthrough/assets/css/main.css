@@ -1,0 +1,19 @@
+body {
+  background-color: #475c82;
+}
+
+div.main {
+  background-color: #ffffff;
+  width: 80%;
+  height: 500px;
+  border: 1px solid red;
+}
+
+div.main .inner-container {
+  display: flex;
+  flex-direction: row;
+}
+
+div.main .inner-container .column{ 
+  border: 1px solid green;
+}
