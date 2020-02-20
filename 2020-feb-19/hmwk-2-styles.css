@@ -1,0 +1,81 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  background-color: rgb(45, 59, 72);
+}
+
+div.flex-row-100 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+div.max-width-50 {
+  min-width: 600px;
+  max-width: 50%;
+}
+
+div#greetingWrapper {
+  background-color: rgb(255, 255, 255);
+}
+
+div#greetingDiv {
+  width: 50%;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+div#greetingDiv p#greetingTag {
+  color: rgb(200, 0, 0);
+}
+
+div#greetingDiv #unlockYourDreamsHeading {
+  font-size: 48px;
+  margin: 16px 0;
+}
+
+div#greetingDiv hr {
+  width: 36px;
+  margin: 36px 0;
+
+  height: 4px;
+  border: none;
+  background: rgb(200, 0, 0);
+}
+
+div#greetingDiv h4 {
+  font-size: 20px;
+  font-weight: normal;
+}
+
+div#headShotDiv {
+  width: 50%;
+  position: relative;
+}
+
+div#headShotDiv img {
+  width: 240px;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+}
+
+div#viewResumeButton {
+  background: rgb(200, 0, 0);
+}
+
+div#viewPortfolioButton {
+  background-color: rgb(11, 24, 65);
+}
+
+div.view-more-btn {
+  padding: 16px;
+  width: 50%;
+  box-sizing: border-box;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: #ffffff;
+}
+
