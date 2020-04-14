@@ -4,6 +4,8 @@
 - Python
 - Javascript
 - CSS - Progress Bars
+- Added a test html file
+- Talked about Github
 
 ## Replay Link
 - TBD
