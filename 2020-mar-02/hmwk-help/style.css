@@ -1,0 +1,194 @@
+/* CSS files add styling rules to your content */
+
+body {
+  background-color: #f5f8ec;
+  margin: 0px;
+}
+
+h1 {
+  font-style: italic;
+  color: #373fff;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.std-btn {
+  width: 50%;
+  text-align: center;
+  padding: 8px;
+  color: white;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.red {
+  background-color: red;
+}
+
+#navWrapper {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 30%;
+  background-color: #011526;
+  color: white;
+}
+
+.logo-container {
+  width: 100px;
+  height: 100px;
+  }
+
+.logo-container img {
+  max-width: 100%;
+}
+
+#innerContainer {
+  display: flex;
+  flex-direction: row;
+  height: 99999%;
+}
+
+#divider {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 150px;
+  border-right: 0.5px solid grey;
+}
+
+#navContent {
+  display: flex;
+  flex-direction: column;
+}
+
+#container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  margin-left: 0px;
+}
+
+#mainWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  background-color: #334352;
+  padding: 32px;
+}
+
+#greetingWrapper {
+  display: flex;
+  margin-left: 60px;
+  flex-direction: column;
+  width: 50%;
+}
+
+.red-line {
+  width: 100px;
+  height: 2.4px;
+  text-align: left;
+  background-color: red;
+  margin: 0px;
+  border: none;
+}
+
+#greetingTag {
+  color: red;
+  font-size: 25px;
+}
+
+#viewAssetswrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+#viewResumeButton {
+  display: flex;
+  flex-direction: column;
+}
+#HeadshotDiv {
+  margin: 0 auto;
+  text-align: center;
+  vertical-align: bottom;
+}
+
+#contentWrapper {
+  background-color: white ;
+}
+
+article.standard-page {
+  padding: 32px;
+}
+
+article.standard-page p {
+  line-height: 1.2em;
+}
+
+.std-btn a {
+  color: white;
+  text-decoration: none;
+}
+
+/* 
+#mybody {
+  background-color: #F9F7F5;
+}
+
+-
+
+/* 
+#greetingWrapper #viewAssetWrapper img {
+  flex-grow: 1;
+} */
+
+/* #greetingTag{
+          color:red;
+        }*/
+
+/* #redHorizontalRule{
+           width:55px;
+           margin:0px;
+           border-left:100px;
+         }*/
+
+/* 
+#headshotImage {
+  width: 100px;
+} */
+
+/* #viewAssetWrapper img {
+  width: 300px;
+  margin-left: 25em;
+  padding: 0.5em;
+} */
+/*
+        .container-2 > {
+           display:flex;
+        }
+*/
+/* 
+.orange {
+  background: #FF7417;
+  flex-grow: 1;
+}
+
+.blue {
+  background: #002F50;
+  flex-grow: 1;
+} */
+
+/* .container-2 > div {
+  font-size: 3vw;
+  padding: 0.5em;
+  color: white;
+  text-align: center;
+} */
+/*.column {
+          width: 50%;
+          background-color:red;
+       }*/
