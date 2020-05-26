@@ -1,0 +1,108 @@
+/*
+  A tool for naming colors - http://chir.ag/projects/name-that-color/#E71D36
+*/
+
+:root {
+  --nav-bg-color: #011526;
+  --main-bg-color: #334352;
+  --crimson: #e71d36;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.page-container {
+  background-color: var(--main-bg-color);
+  display: flex;
+  flex-direction: row;  /* not necesary to define, since this is the default */
+}
+
+.navigation-sidebar {
+  width: 30%;
+  background-color: var(--nav-bg-color);
+}
+
+.navigation-sidebar .logo-container img {
+  width: 50px;
+  margin: 90px auto;
+  display: block;
+}
+
+.main-content {
+  width: 70%;
+  padding: 36px;
+}
+
+.content-container {
+  background-color: #ffffff;
+}
+
+.content-container .red-marker {
+  background-color: var(--crimson);
+  width: 60px;
+  height: 3px;
+  border: none;
+  margin: 20px 0;
+}
+
+.content-container .greeting-container {
+  display: flex;
+  padding: 48px;
+  padding-bottom: 0;
+}
+
+.content-container .greeting-container #myGreeting h1 span {
+  font-size: 18px;
+  color: var(--crimson);
+  display: block;
+}
+
+.content-container .greeting-container .greeting-half{
+  width: 50%;
+}
+
+.content-container .content {
+  padding: 48px;
+}
+
+.content-container .content .red-marker {
+  width: 48px;
+}
+
+.buttons-container {
+  display: flex;
+}
+
+.buttons-container .std-btn {
+  width: 50%;
+  color: #ffffff;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 20px;
+}
+
+.buttons-container .resume-btn {
+  background-color: var(--crimson);
+}
+
+.buttons-container .portfolio-btn {
+  background-color: #06233a;
+}
+
+@media screen and (max-width: 768px) {
+  .page-container {
+    flex-direction: column;
+  }
+
+  .navigation-sidebar, .main-content {
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .nav-container {
+    display: none;
+  }
+} 
