@@ -1,0 +1,226 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --primary-color: grey;
+  --secondary-color: blue;
+  --tertiary-color: black;
+}
+body {
+  
+  color: var(--tertiary-color);
+  font-family: Arial, Helvetica, sans-serif;
+}
+/*header*/
+header {
+  padding: 20px 35px;
+  background-color: var(--tertiary-color);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+header h1 {
+  font-weight: bold;
+  font-size: 36px;
+  color: var(--primary-color);
+  margin: 15px 50px 15px 0px;
+  padding: 5px 5px 5px 25px;
+  text-shadow: 0 0 10px rgba(97, 81, 81, 0.5);
+  background-color: #5e79c9;
+  
+}
+header a {
+  text-decoration: none;
+  color: var(--primary-color);
+  }
+header nav {
+  margin: 7px 0;
+}
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+}
+
+header nav ul li a {
+  margin: 15px 5px 0px 5px;
+  padding: 10px 15px 0px 15px;
+  font-weight: lighter;
+  font-size: 1.55vw; 
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  text-decoration: underline;
+}
+
+header nav ul a:hover {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  border-radius: 15px;
+  text-shadow: none;
+  
+}
+/*end of header*/
+
+/* hero*/
+.hero {
+ 
+  height: 40vh;
+  background-size: contain;
+  background-color: blue;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;   
+  background-image:url("https://ichef.bbci.co.uk/wwfeatures/live/976_549/images/live/p0/7n/19/p07n19vr.jpg"); 
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  
+}
+.hero .headshot {
+  height: 100%;
+}
+
+.hero img {
+  /* float: left;
+  margin-top: 29%; */
+  /* height: 300px;
+  width: 300px; */
+  width: auto;
+  max-height: 100%;
+}
+
+.cool-title {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+  background-color: aqua;
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+
+}
+/*end of hero section */
+
+/*content*/
+.flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+  padding: 10px 0;
+}
+
+.flex h3 {
+  text-align: right;
+  font-size: 30px;
+  flex: 0 0 20%;
+  border-right: 3px solid black;
+  
+}
+.flex div {
+  flex: 0 0 75%;
+}
+.content-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  margin: 7px 0;
+}
+
+#about-info {
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+.project-img {
+  
+
+}
+
+.project-1{
+  background-image: url("./images/run-buddy.PNG");
+  background-size: cover;
+}
+
+.project-2{
+  background-image: url("./images/horieson.PNG");
+  background-size: cover;
+  
+}
+
+.project-3{
+  
+}
+
+.project-4{
+  
+}
+
+.project-5{
+  
+}
+
+.grid {
+  
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-auto-rows: minmax(150px, 1fr);
+  grid-gap: 10px;
+}
+.grid h3 {
+  text-align: right;
+  font-size: 30px;
+  flex: 0 0 20%;
+  padding-left: 20%;
+}
+
+.grid-item {
+  border: 3px solid blue;
+  grid-column: span 4;
+  min-height: 125px;
+  background-color: gray;
+  display: flex;
+  align-items: flex-end;
+}
+
+.grid-item:first-child {
+  grid-column: span 8;
+  grid-row: span 2;
+}
+.grid-item:hover {
+  background-color: indigo;
+}
+
+
+#contact-me {
+  padding: 20px 35px;
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+#contact-me a {
+  text-decoration: none;
+  color: var(--primary-color);
+  }
+
+.contact nav ul {
+  display: flex;
+  justify-content: space-between;
+  /*flex-wrap: wrap;
+  align-items: center;*/
+}
+.contact li {
+  list-style: none;
+}

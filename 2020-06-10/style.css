@@ -1,0 +1,110 @@
+.users {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #f3f3f3;
+  border-radius: 36px;
+  display: flex;
+  flex-direction: row;
+}
+
+.user-card {
+  width: 33%;
+  max-height: 260px;
+  border: 1px solid #333333;
+  text-align: center;
+  border-radius: 18px;
+  position: relative;
+}
+
+.user-img {
+  width: 100px;
+  height: 100px;
+  border-radius: 100px;
+  margin: 16px auto;
+  
+  overflow: hidden;
+}
+
+/* blue - ##6484f6 */
+
+.user-img img {
+  max-width: 300px;
+}
+
+.user-img img#userAliciaImage {
+  transform: translate(-75px, -15px);
+  max-width: 250px;
+}
+
+.user-img img#userHenryImage {
+  transform: translate(-160px, -10px);
+}
+
+.user-img img#userAliceImage {
+  transform: translate(-4px, -5px);
+  max-width: 120px;
+}
+
+.user-img img#userAnaImage {
+  transform: translate(-65px, -10px);
+  max-width: 260px;
+}
+
+.user-img::before {
+  content: "";
+  display: block;
+  
+  border: 2px solid white;
+  opacity: .5;
+  width: 84px;
+  height: 84px;
+  border-radius: 84px;
+  
+  position: absolute;
+  z-index: 10;
+  transform: translate(6px, 6px);
+}
+
+.user-card.veteran .user-img::before {
+  border-color: #6484f6;
+}
+
+.user-card.new-hire .user-img::before {
+  border-color: #7ac930;
+}
+
+.user-status {
+  border: 4px solid transparent;
+  background-color: #ffffff;
+  width: 8px;
+  height: 8px;
+  display: block;
+  border-radius: 8px;
+  z-index: 10;
+  position: absolute;
+  left: calc( 50% + 25px);
+  top: 16px;
+}
+
+.user-status.is-active {
+  border-color: #7ac930;
+}
+
+.user-status.is-inactive {
+  border-color: #6484f6;
+}
+
+
+.user-fullname {
+  font-family: 'Montserrat', 'Arial', 'Helvetica', sans-serif;
+}
+
+.user-email {
+  color: #779977;
+  font-family: 'Arvo', serif;
+}
+
+.conversion-rate {
+  font-family: 'Muli', sans-serif;
+
+}
