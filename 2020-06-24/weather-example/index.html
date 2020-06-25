@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Weather API Sample!</title>
+    
+    <!-- jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"   integrity="sha256-4+XzXVhsDmqanXGHaHvgh1gMQKX40OUvDEBTu8JcmNs="   crossorigin="anonymous"></script>
+    
+    
+    <!-- import the webpage's javascript file -->
+    <script src="./script.js" defer></script>
+  </head>  
+  <body>
+    <header>
+      <h1>
+        Weather API Sample
+      </h1>
+    </header>
+    
+    <div class="dashboard">
+      <div class="left-side">
+        <input type="text" placeholder="Enter a city" id="search-bar"/>
+        <input type="button" value="Make a request" id="test-button" />
+      </div>
+      <div class="right-side">
+        <h2 id="city-name">City Name</h2>
+        <h4>Temperature: <span id="temp-container">89&deg;</span></h4>
+      </div>
+    </div>
+
+
+  </body>
+</html>
+
