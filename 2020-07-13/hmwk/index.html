@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <body>
+      <p>Enter URL To a Photo</p>
+
+      <input type="text" id="URL" value="" />
+
+      <br />
+
+      <button type="button" onclick="getImage()">Clickme!</button>
+
+      <p id="demo">
+
+
+      </p>
+
+      <p>Click To Display Image Below</p>
+
+      <script>
+
+        var standardImage = '<img src="PLACEHOLDER" />';
+
+        function getImage() {
+
+          // 1. Grab the url from the input box
+          var imageURLInputBox = document.getElementById("URL");
+          var imageURL = imageURLInputBox.value;
+          
+          // 2. Insert that url into an image src attribute on the page
+          var theNewImage = standardImage.replace('PLACEHOLDER', imageURL);
+          var demoContainer = document.getElementById("demo");
+
+          // demoContainer.innerHTML = theNewImage;
+          
+          
+          // A second way of doing img HTML tag.
+          // demoContainer.innerHTML = '<img src="' + imageURL + '" />';
+
+
+          var imageHTMLArray = ['<img src="', imageURL, '" />'];
+
+          // A third way
+          demoContainer.innerHTML = imageHTMLArray.join('');
+
+        }
+        // function getImage(){
+        //   var image = "https://im-media.voltron.voanews.com/Drupal/01live-166/styles/sourced/s3/2019-04/752D1C32-8D25-4E4D-8334-A84EC144CD75.jpg?itok=kq5SfNZw";
+        // }
+        // document.getElementById("demo").innerHTML = arr.join("
+        // https://im-media.voltron.voanews.com/Drupal/01live-166/styles/sourced/s3/2019-04/752D1C32-8D25-4E4D-8334-A84EC144CD75.jpg?itok=kq5SfNZw
+        // ")
+
+
+      </script>
+    </body>
+  </head>
+</html>
