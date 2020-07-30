@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A toy piano</title>
+  <!---
+    https://bashooka.com/coding/web-audio-javascript-libraries/
+  --->
+
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+    }
+
+    .key-set {
+      display: flex;
+    }
+    
+    .black-keys {
+      display: flex;
+      position: absolute;
+      top: 0;
+    }
+
+    .key {
+      border: 1px solid black;
+      cursor: pointer;
+      position: relative;
+    }
+
+    .key:hover {
+      background-color: #f9a02a !important;
+    }
+
+    .key span {
+      text-align: center;
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 8px;
+    }
+
+    .white-keys .key {
+      background-color: white;
+      color: black;
+      width: 100px;
+      height: 300px;
+    }
+
+    .black-keys .key {
+      background-color: black;
+      color: white;
+      width: 70px;
+      height: 200px;
+
+      position: absolute;
+    }
+
+    .c-sharp {
+      left: 65px;
+    }
+    .d-sharp {
+      left: 170px;
+    }
+    .f-sharp {
+      left: 370px;
+    }
+    .g-sharp {
+      left: 475px;
+    }
+    .a-sharp {
+      left: 580px;
+    }
+  </style>
+</head>
+<body>
+  <div id="piano">
+    <div class="white-keys key-set">
+      <div class="key c-key" data-note="c-note"><span>C</span></div>
+      <div class="key d-key" data-note="d-note"><span>D</span></div>
+      <div class="key e-key" data-note="e-note"><span>E</span></div>
+      <div class="key f-key" data-note="f-note"><span>F</span></div>
+      <div class="key g-key" data-note="g-note"><span>G</span></div>
+      <div class="key a-key" data-note="a-note"><span>A</span></div>
+      <div class="key b-key" data-note="b-note"><span>B</span></div>
+    </div>
+    <div class="black-keys key-set">
+      <div class="key c-sharp" data-note="c-sharp-note"><span>C#</span></div>
+      <div class="key d-sharp" data-note="d-sharp-note"><span>D#</span></div>
+      <div class="key f-sharp" data-note="f-sharp-note"><span>F#</span></div>
+      <div class="key g-sharp" data-note="g-sharp-note"><span>G#</span></div>
+      <div class="key a-sharp" data-note="a-sharp-note"><span>A#</span></div>
+    </div>
+  </div>
+  
+  
+  <audio src="./piano-note-c.mp3" id="c-note"></audio>
+  <audio src="./piano-note-c.mp3" id="d-note"></audio>
+  <audio src="./piano-note-c.mp3" id="e-note"></audio>
+  <audio src="./piano-note-c.mp3" id="f-note"></audio>
+  <audio src="./piano-note-c.mp3" id="g-note"></audio>
+  <audio src="./piano-note-c.mp3" id="a-note"></audio>
+  <audio src="./piano-note-c.mp3" id="b-note"></audio>
+  <audio src="./piano-note-c.mp3" id="c-sharp-note"></audio>
+  <audio src="./piano-note-c.mp3" id="d-sharp-note"></audio>
+  <audio src="./piano-note-c.mp3" id="f-sharp-note"></audio>
+  <audio src="./piano-note-c.mp3" id="g-sharp-note"></audio>
+  <audio src="./piano-note-c.mp3" id="a-sharp-note"></audio>
+
+  <script>
+
+    const $ = document.querySelector.bind(document);
+    const $$ = document.querySelectorAll.bind(document);
+
+
+    async function play (elementId) {
+      const elem = $(elementId);
+      if (!elem) {
+        console.log('There is no note for this element:', elementId);
+        return;
+      }
+      try {
+        await elem.play();
+      } catch(error) {
+        alert(error);
+      }
+    }
+
+
+    const keys = $$('.key');
+
+    keys.forEach(function (key) {
+      key.addEventListener('click', event => {
+      
+        const target = event.target;
+        const audioElementId = target.dataset.note || false;
+
+        console.log('Clicked Key: ', target.innerText, audioElementId);
+
+        if (audioElementId) {
+          play(`#${audioElementId}`);
+        }
+
+      });
+    });
+   
+
+
+  </script>
+
+
+</body>
+</html>
