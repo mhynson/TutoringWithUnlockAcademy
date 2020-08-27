@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <!--
+    - INput the price of the option
+    - submit -> return a list of profit and loss targets by percentage
+
+  -->
+
+  <!---
+  
+    $5.73 - input price of the option
+
+    20% loss -  $0.80
+    10% loss -  $0.90
+    Break Even - $1.00
+    10% profit -  $1.10
+    25% profit -  $1.25
+    50% profit -  $1.50
+    100% profit -  $2.00
+    500% profit -  $5.00
+  --->
+
+  <form>
+    <input type="text" id="option-price" />
+    <input type="submit" id="submitBtn" value="Calculate Profit/Loss Targets" />
+  </form>
+
+  <div id="results">
+
+  </div>
+
+  <script>
+    const resultsContainer = document.getElementById('results');
+
+    const calculateTargets = (optionPrice) => {
+      const pctLoss20 = optionPrice - (optionPrice * .20);
+      const pctLoss10 = optionPrice - (optionPrice * .10);
+      const breakEven = optionPrice;
+      const pctGain10 = optionPrice + (optionPrice * .10);
+      const pctGain25 = optionPrice + (optionPrice * .25);
+      const pctGain50 = optionPrice + (optionPrice * .50);
+      const pctGain100 = optionPrice + optionPrice;
+      const pctGain500 = optionPrice + (optionPrice * 5);
+
+      const targets = {
+        '20-pct-loss': pctLoss20,
+        '10-pct-loss': pctLoss10,
+        'break-even': breakEven,
+        '10-pct-loss': pctGain10,
+        '25-pct-loss': pctGain25,
+        '50-pct-loss': pctGain50,
+        '100-pct-loss': pctGain100,
+        '500-pct-loss': pctGain500,
+      };
+
+      resultsContainer.innerHTML = '';
+
+      for (key in targets) {
+        const target = targets[key];
+        console.log(key, target);
+        resultsContainer.innerHTML += '<li>' + target + '</li>';
+      }
+    };
+
+    document.getElementById('submitBtn').addEventListener('submit', (evt) => {
+      evt.preventDefault();
+      const optionPrice = document.getElementById('option-price');
+      calculateTargets(optionPrice);  
+    });
+    
+
+  </script>
+</body>
+</html>
