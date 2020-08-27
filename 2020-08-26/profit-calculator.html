@@ -2,20 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>A simple profit/loss target calculator</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
 </head>
 <body>
   <!--
-    - INput the price of the option
-    - submit -> return a list of profit and loss targets by percentage
+    Background:
+      I'd like a simple way to insert the price of a stock option and quickly
+      know what the price of that option would be at different profit or loss
+      positions. This information could then be separately used to set alerts
+      within my brokerage account.
 
+    Process:
+    1. Allow the user to input the price of the option
+    2. Once the user submits the price, a list of profit and
+      loss targets by percentage will be displayed to the user.
   -->
 
   <!---
-  
-    $5.73 - input price of the option
 
+    Example:
+  
+    User inputs price of the option - $1.00
+
+    The following would display on the page.
     20% loss -  $0.80
     10% loss -  $0.90
     Break Even - $1.00
@@ -26,19 +37,30 @@
     500% profit -  $5.00
   --->
 
-  <form>
-    <input type="text" id="option-price" />
-    <input type="submit" id="submitBtn" value="Calculate Profit/Loss Targets" />
+  <form id="profitForm">
+    <div class="my-5 mx-auto" style="width: 50%;">
+      <h1 class="display-4">Enter your option price below</h1>
+      <div class="form-group">
+        <div class="input-group-prepend">
+          <span class="input-group-text">$</span>
+          <input type="text" id="option-price" class="mr-3" />
+          <input type="submit" id="submitBtn" value="Calculate Profit/Loss Targets" />
+        </div>
+      </div>
+    </div>
   </form>
 
-  <div id="results">
-
+  <div class="container">
+    <ul id="results" class="list-group">
+  
+    </ul>
   </div>
 
   <script>
     const resultsContainer = document.getElementById('results');
 
-    const calculateTargets = (optionPrice) => {
+    const calculateTargets = (inputValue) => {
+      const optionPrice = parseFloat(inputValue);
       const pctLoss20 = optionPrice - (optionPrice * .20);
       const pctLoss10 = optionPrice - (optionPrice * .10);
       const breakEven = optionPrice;
@@ -51,26 +73,34 @@
       const targets = {
         '20-pct-loss': pctLoss20,
         '10-pct-loss': pctLoss10,
-        'break-even': breakEven,
-        '10-pct-loss': pctGain10,
-        '25-pct-loss': pctGain25,
-        '50-pct-loss': pctGain50,
-        '100-pct-loss': pctGain100,
-        '500-pct-loss': pctGain500,
+        'break--even': breakEven,
+        '10-pct-gain': pctGain10,
+        '25-pct-gain': pctGain25,
+        '50-pct-gain': pctGain50,
+        '100-pct-gain': pctGain100,
+        '500-pct-gain': pctGain500,
       };
 
       resultsContainer.innerHTML = '';
 
       for (key in targets) {
         const target = targets[key];
-        console.log(key, target);
-        resultsContainer.innerHTML += '<li>' + target + '</li>';
+        const targetAsMoney = '$' + parseFloat(target).toFixed(2);
+        const keyAsText = key.replace('pct', '%').replace('-', '').replace('-', ' ');
+        const html = `
+          <li class="list-group-item text-center">
+            <h3>${keyAsText}</h3>
+            <h2>${targetAsMoney}</h2>
+          </li>`;
+
+        resultsContainer.innerHTML += html;
       }
     };
 
-    document.getElementById('submitBtn').addEventListener('submit', (evt) => {
+    const profitForm = document.getElementById('profitForm');
+    profitForm.addEventListener('submit', (evt) => {
       evt.preventDefault();
-      const optionPrice = document.getElementById('option-price');
+      const optionPrice = document.getElementById('option-price').value;
       calculateTargets(optionPrice);  
     });
     

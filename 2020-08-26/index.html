@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="./leetcode-example.js"></script>
+</head>
+<body>
+  <h1>Leetcode Example + Array Indexes / Indices</h1>
+  <ul id="results">
+    
+  </ul>
+  <script>
+
+    const myFunc = () => {
+      const kidsWithCandyArray = [2,3,5,1,3];
+      const extraCandies = 3;
+
+      const states = {
+        'AZ': 'Arizona',
+        'AK': 'Alaska',
+        'AL': 'Alabama',
+        'MI': 'Michigan',
+        'NY': 'New York',
+        'GA': 'Georgia',
+      };
+
+      // const result = kidsWithCandies(kidsWithCandyArray, extraCandies);
+
+      console.log(states);
+
+      for(var i=0; i < kidsWithCandyArray.length; i++) {
+        var candyCount = kidsWithCandyArray[i];
+        var sum = candyCount + extraCandies;
+
+        var resultsContainer = document.getElementById('results');
+        resultsContainer.innerHTML += '<li> The value of "i" is ' + i + '. <br /> The sum with extra candies is ' + sum + '.</li>';
+      }
+
+    };
+
+    myFunc();
+    
+  </script>
+</body>
+</html>
