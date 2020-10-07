@@ -1,0 +1,46 @@
+[
+    {
+      "category": "jacket",
+      "title": "Red Jacket"
+    },
+    {
+      "category": "jacket",
+      "title": "Blue Jacket"
+    },
+    {
+      "category": "pants",
+      "title": "Red Sweats"
+    },
+    {
+      "category": "pants",
+      "title": "Green Sweats"
+    },
+    {
+      "category": "tee",
+      "title": "Yellow Tee"
+    },
+    {
+      "category": "tee",
+      "title": "Blue Tee"
+    },
+    {
+      "category": "pants",
+      "title": "Yellow Sweats"
+    },
+    {
+      "category": "tee",
+      "title": "Red Tee"
+    },
+    {
+      "category": "jacket",
+      "title": "Green Jacket"
+    },
+    {
+      "category": "jacket",
+      "title": "Orange Jacket"
+    },
+    {
+      "category": "tee",
+      "title": "Orange Tee"
+    }
+  ]
