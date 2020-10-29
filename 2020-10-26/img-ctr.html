@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        /* center the image using text align */
+        .con01 {
+            background-color: crimson;
+        }
+
+        .con01 p {
+            text-align: center;
+        }
+
+        /* .con01 img { */
+            /* width: 12px; */
+        /* } */
+
+        /* center the image using block */
+        .con02 {
+            background-color: darkgoldenrod;
+            padding: 60px;
+        }
+
+        .con02 img {
+            display: block;
+            margin: 0 auto; /* use this to center an img */
+        }
+
+        img {
+            max-width: 480px;
+        }
+
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="con01">
+        <h1>Center using text-align: center</h1>
+        <p>
+            <img src="./.assets/img/navy-salt.jpg" />
+        </p>
+    </div>
+
+    <div class="con02">
+        <h1>Center using display: block</h1>
+        <img src="./.assets/img/voyager.jpg" />
+    </div>
+
+</body>
+</html>

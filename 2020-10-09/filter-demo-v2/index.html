@@ -1,0 +1,125 @@
+<!doctype html>
+
+<html>
+    <head>
+        <script>
+            const baseKey = 'appV04or1IJbqO6ji';
+            const apiKey = 'keyN8rkVO8dxiG1xx';
+        </script>
+
+        <style>
+            .products {
+                display: grid;
+                grid-template-columns: repeat(3, 1fr);
+
+                grid-gap: 16px;
+            }
+
+            .product {
+                width: 300px;
+                height: 100px;
+                background-color: #f9f9f9;
+                color: white;
+                font-family: sans-serif;
+                font-size: 18px;
+                box-sizing: border-box;
+                padding: 16px;
+                position: relative;
+            }
+
+            .product a {
+                color: #090909;
+                text-decoration: none;
+                line-height: 22px;
+                display: block;
+                text-align: center;
+            }
+
+            .product.hidden {
+                opacity: .2;
+                display: none;
+            }
+
+            .product .categories {
+                display: block;
+                margin: 16px 16px 0 16px;
+                padding: 0;
+                font-size: 12px;
+                position: absolute;
+                bottom: 16px;
+                margin: 0 auto;
+            }
+
+            .product .categories li {
+                padding: 6px 12px;
+                color: white;
+                background-color: #414641;
+                list-style: none;
+                display: inline;
+                border-radius: 16px;
+            }
+
+            .jacket {
+                background-color: red;
+            }
+
+            .tee {
+                background-color: orange;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="controls">
+            <select id="category">
+                <option value="jacket">Jacket</option>
+                <option value="pants">Pants</option>
+                <option value="tee">Tees</option>
+            </select>
+        </div>
+        <div class="products"></div>
+
+        <script>
+
+            class Car {
+                constructor() {
+                    this.numberOfWheels = 4;
+                    this.color = 'black';
+                    this.isConvertible = false;
+                }
+
+                move() {
+                    console.log('start driving');
+                }
+            }
+
+            const mustang = new Car();
+            console.log(mustang.color);
+
+            class Person {
+                constructor(f, l) {
+                    this.firstName = f;
+                    this.lastName = l;
+                    this.height = '';
+                    this.weight = '';
+                }
+
+                name() {
+                    return `${this.firstName} ${this.lastName}`;
+                }
+
+                
+                move() {
+                    console.log('start walking');
+                }
+            }
+
+            const person1 = new Person('Michael', 'Hynson');
+
+            console.log( person1.name() );
+
+
+
+        </script>
+        
+    </body>
+</html>
