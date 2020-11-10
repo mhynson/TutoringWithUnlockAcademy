@@ -1,0 +1,211 @@
+
+
+
+.selector-for-some-widget {
+    box-sizing: content-box;
+    }
+
+    body{
+        background-color: #4E5266;
+        font-family: inherit;
+    }
+
+    
+    /* --- HEADER --- */
+    .container-fluid{
+        background-color: #4E5266;
+    }
+
+    .header{
+        padding: 50px 45px 30px 45px;
+    }
+
+    #logo{
+        color: white;
+        margin-right: 20px;
+        padding-left: 40px;
+    }
+    
+    #sideLogo{
+        color: rgba(255, 255, 255, 0.5);
+        font-size: 16pt;
+        border-left: solid 1px rgba(255, 255, 255, 0.25);
+        padding-left: 10px;
+    }
+
+    .dropdown-toggle{
+        color: white;
+    }
+    
+    .dropdown-toggle:hover{
+        background-color: white;
+        opacity: 0.3;
+    }
+
+    .dropdown-menu{
+        text-align: center;
+        font-weight: bold;
+        font-size: 14pt;
+    }
+
+    .dropdown-menu li:hover{
+        background-color: rgb(231, 231, 231);
+        color: rgb(60, 126, 247);
+    }
+
+    .dropdown-menu a:hover{
+        color: rgb(60, 126, 247);
+        text-decoration: none;
+    }
+
+
+    
+
+    /* --- FIRST ROW --- */
+    #darkBlueDiv{
+        background-color: #4cabb1;
+        text-align: center;
+        padding: 45px;
+    }
+
+    #darkBlueDiv button{
+        background-color: #4CABB1;
+        color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    
+    #lightBlueDiv{
+        background-color: #69c7ad;
+        text-align: center;
+        padding: 45px;
+    }
+
+    #lightBlueDiv button{
+        background-color: #79D1B8;
+        color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+
+    .firstRowClass{
+        padding: 0px;
+    }
+
+    .firstRowImage{
+        padding: 0px;
+    }
+
+
+
+    /* --- SECOND ROW --- */
+    .features{
+        width: 15%;
+        text-align: center;
+        padding: 5px 60px 5px 80px;
+    }
+
+    .border-right{
+        margin: -5px;
+        border: 1px solid rgb(52, 52, 110);
+        height: 180px;
+
+    }
+
+    .secondRow{
+        background-color: white;
+        height: 400px;
+        padding: 20px 0px 50px 0px;            
+    }
+
+    .secondRow h3,h4{
+        text-transform: uppercase;
+    }
+
+
+
+    /* --- THIRD ROW --- */
+    .thirdRow{
+        height: 600px;
+        background-color: #FED586;
+    }
+
+    .carousel img{
+        height: 300px;
+    }
+
+    .carousel-caption{
+        height: 200px;
+        /* background-color: white; */
+        text-align: center;
+    }
+
+
+
+    /* --- FOURTH ROW --- */
+    .fourthRow{
+        background-color: white;
+        text-align: center;
+        height: 740px;
+    }
+
+    .fourthRow #topLeft{
+        height: 280px;
+        padding: 45px;
+    }
+
+    .fourthRow #topRight{
+        height: 280px;
+    }
+
+    .fourthRow #bottomLeft{
+        height: 280px;
+    }
+
+    .fourthRow #bottomRight{
+        height: 280px;
+        padding: 55px;
+    }
+
+    .fourthRowSection{
+        background-color: white;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        margin: 20px 45px;
+    }
+    
+
+
+    /* --- FIFTH ROW --- */
+    .fifthRow{
+        text-align: center;
+        background-color: #4CABB1;
+        height: 260px;
+        padding-top: 35px;
+    }
+
+
+
+    /* --- LAST ROW --- */
+    .lastRow{
+        text-align: center;
+        padding: 30px 0px;
+    }
+
+    .lastRow h6{
+        color: white;
+        font-weight: bold;
+    }
+
+    .lastRow .border-right{
+        height: 220px;
+
+    }
+
+    .lastRow a{
+        color: rgba(255, 255, 255, 0.863);
+        opacity: 0.7;
+    }
+
+    .footerOptions{
+        margin: 0px -1px;
+        padding: 0px;
+    }
+    
