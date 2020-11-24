@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <title>Form a Story</title>
+    <script>
+
+      const theForm = document.getElementById('theForm');
+
+      function showStory() { 
+        const animal1 = document.getElementById('animal-1').value;
+        const animal2 = document.getElementById('animal-2').value;
+        const animal3 = document.getElementById('animal-3').value;
+        const storyTemplate = `The ${animal1} jumped over the moon and ran into ${animal2}. The ${animal3} yelled!!`;
+
+        // console.log(storyTemplate);
+
+        document.getElementById('rendered-story').innerHTML = storyTemplate;
+
+      }
+    </script>
+  </head>
+  <body>
+    <section id="top">
+      <img src="https://content.codecademy.com/courses/learn-html-forms/formAStoryLogo.svg" alt="Form A Story Logo">
+    </section>
+    <section id="main">
+      <h1>Complete the Form -<br> Complete the Story!</h1>
+      <hr>
+      <!--Add your form below:-->
+      <form method="GET">
+        <label for="animal-1">Animal:</label><br/>
+        <input id="animal-1" type="text" name="animal-1" required><br/>
+        <label for="animal-2">Another Animal:</label><br/>
+        <input id="animal-2" type="text" name="animal-2" required><br/>
+        <label for="animal-3">One More Animal:</label><br/>
+        <input id="animal-3" type="text" name="animal-3" required><br/>
+        <label for="adj-1">Adjective(past tense):</label><br/>
+        <input id="adj-1" type="text" name="adj-1" required><br/>
+        <label for="verb-1">Verb(ends in -ing):</label><br/>
+        <input id="verb-1" type="text" name="verb-1" required><br/>
+        <label for="num-1">Number:</label><br/>
+        <input id="num-1" type="number" name="num-1" required><br/>
+        <span>Yes or No</span><br/>
+        <input type="submit" value="Form My Story!" name="" onclick="showStory()">
+      </form>
+    </section>
+
+    <section>
+      <p id="rendered-story">
+
+      </p>
+    </section>
+  </body>
+</html>

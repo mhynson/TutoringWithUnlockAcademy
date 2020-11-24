@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Some inputs</h1>
+
+    <input placeholder="enter your email" id="emailInput1" />
+    <input placeholder="enter your email" id="emailInput2" />
+
+    <button onclick="doSomething()">Do Something</button>
+
+    <script>
+        function doSomething() {
+            const emailInput1 = document.getElementById('emailInput1');
+            const emailInput2 = document.getElementById('emailInput2');
+
+            console.log(emailInput1);
+            console.log(emailInput2.value);
+        }
+    </script>
+</body>
+</html>
