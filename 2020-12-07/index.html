@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS ARRAYS</title>
+
+    <style>
+        /* background-image demo */
+        body {
+            background-image: url('https://images.pexels.com/photos/6027886/pexels-photo-6027886.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260');
+            background-repeat: no-repeat;
+            background-size: 400px 600px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <script>
+
+        const nums = [3, 4, 5, 2];
+        const maxProduct = (nums) => {
+            const sorted_array = nums.sort().reverse();
+
+            const largest_number = sorted_array[0];
+            const second_largest_number = sorted_array[1];
+            
+            const maximum_product = (largest_number - 1) * (second_largest_number - 1);
+            return maximum_product;
+        };
+
+        console.log(maxProduct([3, 4, 5, 2]));
+        console.log(maxProduct([0, 97, 1, 2]));
+        console.log(maxProduct([9, 8, 1, 9]));
+
+    </script>
+
+
+</body>
+</html>
